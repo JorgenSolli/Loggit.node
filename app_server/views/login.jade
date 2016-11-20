@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    section.hero.is-fullheight.is-dark.is-bold#login-bg
+        .hero-body
+            .container
+                .columns.is-vcentered
+                    .column.is-4.is-offset-4
+                        h1.title Login
+                        .box
+                            label.label Username
+                            p.control
+                                input.input(type="text")(placeholder="Username")
+                            label.label Password
+                                input.input(type="password")(placeholder="●●●●●●●")
+                            hr
+                            p.control
+                                button.button.is-primary Login
+                                | &nbsp;
+                                button.button.is-default Cancel
+                        p.has-text-centered
+                            a(href="#") Register an Account
+                            |  |&nbsp;
+                            a(href="#") Forgot Password
+                            |  |&nbsp;
+                            a(href="#") Need help?

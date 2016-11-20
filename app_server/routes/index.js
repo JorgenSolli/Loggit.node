@@ -1,12 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
+var ctrlUser = require('../controllers/user');
+var ctrlHome = require('../controllers/home');
 
-var homePageControl = function(req, res) {
-  res.render('index', { title: 'Express' });
-};
+/* User pages */
+router.get('/user', ctrlUser.user);
+router.get('/user/add', ctrlUser.addWorkout);
+router.get('/user/fill', ctrlUser.FillWorkout);
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* Home page */
+router.get('/', ctrlHome.home);
 
 module.exports = router;

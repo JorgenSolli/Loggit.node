@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    .columns.admin-panel-columns
+        aside.column.is-2.aside.hero.is-fullheight.is-hidden-mobile
+            div
+                .main
+                    .title Main
+                    a(href="#").item.active
+                        span.icon
+                            i.fa.fa-home
+                        span.name Dashboard
+                    a(href="#").item
+                        span.icon
+                            i.fa.fa-plus-circle
+                        span.name Log a session
+                    a(href="#").item
+                        span.icon
+                            i.fa.fa-calendar
+                        span.name View schedule
+                    a(href="#").item
+                        span.icon
+                            i.fa.fa-line-chart
+                        span.name Get motivated
+        .column.is-10.admin-panel
+            section.section.hero.is-small.admin-panel-header
+                .hero-body
+                    .container
+                        h1.title.is-2 Welcome, User!
+                        h2.subtitle.is-4 Keep up the good work!
+                .hero-foot
+                    nav.level
+                        .level-item.has-text-centered
+                            p.heading Total workouts
+                            p.title 101
+                        .level-item.has-text-centered
+                            p.heading Avg per week
+                            p.title 5
+                        .level-item.has-text-centered
+                            p.heading Been active since
+                            p.title 11 Nov 2016
+            section.section
+                .columns.is-mobile.is-multiline
+                    .column.is-one-third-desktop.is-full-mobile
+                        section.panel
+                            p.panel-heading Weekly activity
+                            p.panel-tabs
+                                a(href="#") This week
+                                a(href="#") Last week
+                                a(href="#") Two weeks ago
+                            .panel-block
+                                #chart-1(style="height:250px")
+                            .panel-block
+                                button.button.is-default.is-outlined.is-fullwidth View Data

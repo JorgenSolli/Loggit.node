@@ -1,4 +1,20 @@
-/* Get home page */
-module.exports.index = function (req, res) {
-    res.render('index', { title: 'Loggit' });
-}
+/* Get User page */
+module.exports.user = function (req, res) {
+    res.render('user', {
+        title: 'Loggit - Dashboard',
+        pageHeader: {
+            title: 'Loggit',
+            strapline: 'Dashboard'
+        }
+    });
+};
+
+/* Get Add workout page */
+module.exports.addWorkout = function (req, res) {
+    res.render('user', { title: 'Add workout' });
+};
+
+/* Get Fill workout page */
+module.exports.FillWorkout = function (req, res) {
+    res.render('user', { title: 'Fill Workour' });
+};

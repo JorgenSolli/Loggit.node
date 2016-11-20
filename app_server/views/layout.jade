@@ -1,10 +1,39 @@
 doctype html
 html
-  head
-    title= title
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/bulma.css')
-  body
-    block content
-    script(src='javascripts/jquery-3.1.1.min.js')
+    head
+        title= title
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='/stylesheets/bulma.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+
+    body
+        nav.nav
+            .nav-left
+                a.nav-item.is-brand(href='/') Loggit
+            .nav-center
+                a.nav-item(href='https://github.com/JorgenSolli/Loggit')
+                    span.icon
+                        i.fa.fa-github
+                a.nav-item(href='/about-loggit') About Loggit
+            span.nav-toggle
+                span
+                span
+                span
+            .nav-right.nav-menu
+                a.nav-item(href='/') Hjem
+                a.nav-item(href='/user') Logg inn
+
+
+        block content
+        footer.footer
+            .content.has-text-centered
+                p
+                    strong Loggit&ensp;
+                    span av&ensp;
+                        a(href='www.jorgensolli.no') Jørgen Solli
+                p
+                    a.icon(href='https://github.com/JorgenSolli')
+                        i.fa.fa-github
+
+        script(src='javascripts/jquery-3.1.1.min.js')
