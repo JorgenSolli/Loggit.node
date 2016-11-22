@@ -32,7 +32,7 @@ $(document).ready(function() {
     Morris.Donut({
         element: 'chart2',
         data: [
-            {label: "Back", value: 3},
+            {label: "Back", value: 2},
             {label: "Chest", value: 3},
             {label: "Legs", value: 2},
             {label: "Arms", value: 4}
