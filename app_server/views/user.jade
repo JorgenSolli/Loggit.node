@@ -41,14 +41,50 @@ block content
                             p.title 11 Nov 2016
             section.section
                 .columns.is-mobile.is-multiline
-                    .column.is-one-third-desktop.is-full-mobile
+                    .column.is-half-desktop.is-full-mobile
                         section.panel
-                            p.panel-heading Weekly activity
+                            p.panel-heading Weekly weight lifted
                             p.panel-tabs
                                 a(href="#") This week
                                 a(href="#") Last week
                                 a(href="#") Two weeks ago
                             .panel-block
-                                #chart-1(style="height:250px")
+                                #chart1
+                            .panel-block
+                                button.button.is-default.is-outlined.is-fullwidth View Data
+                    .column.is-half-desktop.is-full-mobile
+                        section.panel
+                            p.panel-heading Workout distribution sessions /week
+                            p.panel-tabs
+                                a(href="#") This week
+                                a(href="#") Last week
+                                a(href="#") Two weeks ago
+                            .panel-block
+                                #chart2
+                            .panel-block
+                                button.button.is-default.is-outlined.is-fullwidth View Data
+                .columns.is-mobile.is-multiline
+                    .column.is-half-desktop.is-full-mobile
+                        section.panel
+                            p.panel-heading Weekly activity
+                            p.panel-tabs
+                                a(href="#") Exercise 1
+                                a(href="#") Exercise 2
+                                a(href="#") Exercise 3
+                                a(href="#") Exercise 4
+                                a(href="#") Exercise 5
+                            .panel-block
+                                #chart3
+                            .panel-block
+                                button.button.is-default.is-outlined.is-fullwidth View Data
+                    .column.is-half-desktop.is-full-mobile
+                        section.panel
+                            p.panel-heading Weight lifted /day
+                            p.panel-tabs
+                                a(href="#") This week
+                                a(href="#") Last week
+                                a(href="#") Two weeks ago
+                            .panel-block
+                                #chart4
                             .panel-block
                                 button.button.is-default.is-outlined.is-fullwidth View Data
