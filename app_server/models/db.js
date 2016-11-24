@@ -3,7 +3,11 @@
  */
 var mongoose = require( 'mongoose' );
 var dbURI = 'mongodb://localhost/Loggit';
+if (process.env.NODE_ENV === 'production') {
+    dbURI = 'mondodb://heroku_d1qpsmf7:e3918dsqmfvol84iqq56mpffrh@ds163397.mlab.com:63397/heroku_d1qpsmf7';
+}
 mongoose.connect(dbURI);
+require('./user');
 
 mongoose.connection.on('connected', function () {
     console.log('Mongoose connected to ' + dbURI);
@@ -40,4 +44,3 @@ process.on('SIGTERM', function () {
     });
 });
 
-require('./users');

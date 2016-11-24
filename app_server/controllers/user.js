@@ -5,7 +5,10 @@ module.exports.user = function (req, res) {
         pageHeader: {
             title: 'Loggit',
             strapline: 'Dashboard'
-        }
+        },
+        user: [{
+
+        }]
     });
 };
 
