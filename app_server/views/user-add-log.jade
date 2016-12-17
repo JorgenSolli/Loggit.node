@@ -1,0 +1,46 @@
+//
+   Created by Jørgen on 26.11.2016.
+
+extends layout
+include _includes/scripts
+
+block content
+    .columns.admin-panel-columns
+        aside.column.is-2.aside.hero.is-fullheight.is-hidden-mobile
+            div
+                .main
+                    .title Main
+                    a(href="/user").item
+                        span.icon
+                            i.fa.fa-home
+                        span.name Dashboard
+                    a.item.active
+                        span.icon
+                            i.fa.fa-plus-circle
+                        span.name Log a session
+                    a(href="#").item
+                        span.icon
+                            i.fa.fa-calendar
+                        span.name View schedule
+                    a(href="#").item
+                        span.icon
+                            i.fa.fa-line-chart
+                        span.name Get motivated
+        .column.is-10.admin-panel
+            section.section
+                h1.title.is-2 Add a workout!
+                    h1.subtitle.is-3 Select a workout
+                    p.control
+                        label.label From your current routine, what day are we logging?
+                        span.select.is-fullwidth
+                            select#selectRoutine
+                                option Monday
+                                option Tuesday
+                                option Wednesday
+                                option Friday
+                                option Saturday
+                    .has-text-centered
+                        a.button.is-large.is-success(href='?day=') LETS GO!
+    +jQuery
+    +datepicker
+    +dashboardAddLog

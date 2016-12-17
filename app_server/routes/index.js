@@ -5,8 +5,8 @@ var ctrlHome = require('../controllers/home');
 
 /* User pages */
 router.get('/user', ctrlUser.user);
-router.get('/user/add', ctrlUser.addWorkout);
-router.get('/user/fill', ctrlUser.FillWorkout);
+router.get('/user/routine', ctrlUser.routine);
+router.get('/user/log', ctrlUser.addLog);
 
 /* Home page */
 router.get('/', ctrlHome.home);

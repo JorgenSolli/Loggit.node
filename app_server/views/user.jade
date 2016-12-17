@@ -1,4 +1,5 @@
 extends layout
+include _includes/scripts
 
 block content
     .columns.admin-panel-columns
@@ -6,11 +7,11 @@ block content
             div
                 .main
                     .title Main
-                    a(href="#").item.active
+                    a.item.active
                         span.icon
                             i.fa.fa-home
                         span.name Dashboard
-                    a(href="#").item
+                    a(href="/user/log").item
                         span.icon
                             i.fa.fa-plus-circle
                         span.name Log a session
@@ -26,8 +27,12 @@ block content
             section.section.hero.is-small.admin-panel-header
                 .hero-body
                     .container
-                        h1.title.is-2 Welcome, User!
+                        h1.title.is-2
+                            | Welcome,&nbsp
+                            =user.name
                         h2.subtitle.is-4 Keep up the good work!
+                        p data:
+                        p=user.routine[0].muscleGroup
                 .hero-foot
                     nav.level
                         .level-item.has-text-centered
@@ -49,7 +54,7 @@ block content
                                 a(href="#") Last week
                                 a(href="#") Two weeks ago
                             .panel-block
-                                #chart1
+                                #weightLifted
                             .panel-block
                                 button.button.is-default.is-outlined.is-fullwidth View Data
                     .column.is-half-desktop.is-full-mobile
@@ -60,7 +65,7 @@ block content
                                 a(href="#") Last week
                                 a(href="#") Two weeks ago
                             .panel-block
-                                #chart2
+                                #distSession
                             .panel-block
                                 button.button.is-default.is-outlined.is-fullwidth View Data
                 .columns.is-mobile.is-multiline
@@ -74,7 +79,7 @@ block content
                                 a(href="#") Exercise 4
                                 a(href="#") Exercise 5
                             .panel-block
-                                #chart3
+                                #weeklyActivity
                             .panel-block
                                 button.button.is-default.is-outlined.is-fullwidth View Data
                     .column.is-half-desktop.is-full-mobile
@@ -85,6 +90,13 @@ block content
                                 a(href="#") Last week
                                 a(href="#") Two weeks ago
                             .panel-block
-                                #chart4
+                                #weightLiftedDay
                             .panel-block
                                 button.button.is-default.is-outlined.is-fullwidth View Data
+
+    script(type = 'text/javascript').
+        var exercisesData = !{JSON.stringify(exerciseData)};
+
+    +jQuery()
+    +morris
+    +dashboardHome
